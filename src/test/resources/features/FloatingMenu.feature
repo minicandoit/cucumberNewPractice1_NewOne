@@ -1,4 +1,4 @@
-@test
+@test@Floating
 Feature: Floating Menu
   Scenario: Test scrolls the page.
   Test asserts that the floating menu is still displayed.

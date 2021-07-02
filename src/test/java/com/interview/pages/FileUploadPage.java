@@ -17,4 +17,6 @@ public class FileUploadPage {
     public WebElement fileUploadedMessage;
     @FindBy(id="uploaded-files")
     public WebElement uploadedFileName;
+    @FindBy(id = "drag-drop-upload")
+    public WebElement dropArea;
 }

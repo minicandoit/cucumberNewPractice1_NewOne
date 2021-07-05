@@ -1,4 +1,4 @@
-@test
+@test@hover
 Feature: Mouse Hover
   Scenario: Test does a mouse hover on each image.
   Test asserts that additional information is displayed for each image.

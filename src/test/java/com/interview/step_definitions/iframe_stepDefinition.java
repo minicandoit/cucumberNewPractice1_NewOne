@@ -24,7 +24,9 @@ IframePage iframePage=new IframePage();
     @When("user type in the iframe text box")
     public void user_type_in_the_iframe_text_box() {
        iframePage.alertXButton.click();
-Driver.getDriver().switchTo().frame(iframePage.textBox);
+//Driver.getDriver().switchTo().frame(iframePage.textBox);//iframe WebElement
+       // Driver.getDriver().switchTo().frame(0);//index
+        Driver.getDriver().switchTo().frame("mce_0_ifr");//id value or name value
 iframePage.yourTextGoesHere.sendKeys(Keys.BACK_SPACE+"Thank You!");
     }
     @Then("the typed text is as expected")

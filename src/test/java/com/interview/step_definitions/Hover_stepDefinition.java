@@ -31,14 +31,40 @@ List<WebElement>images=hoverPage.images;
         for (WebElement eachImage : images) {
             actions.moveToElement(eachImage).perform();
 
+
+//
+//            System.out.println("hoverPage.texts1.getText() = " + hoverPage.texts1.getText());
+//            System.out.println("hoverPage.texts2.getText() = " + hoverPage.texts2.getText());
+//            System.out.println("hoverPage.texts3.getText() = " + hoverPage.texts3.getText());
+
+
+
         }
+
+
+        for (int i = 0; i <images.size(); i++) {
+            actions.moveToElement(images.get(i)).perform();
+
+            System.out.println("images.get(i).getText() = " + images.get(i).getText());
+            System.out.println("(\"name: user\"+i) = " + ("name: user" + (i+1)));
+
+            //    if(images.get(i).getText().equals("name: user"))
+              Assert.assertTrue(images.get(i).getText().contains("name: user"+(i+1)));
+
+        }
+
+
     }
     @Then("additional information is displayed for each image.")
     public void additional_information_is_displayed_for_each_image() {
-        System.out.println("hoverPage.texts1.getText() = " + hoverPage.texts3.getText());
+        //you can see the text after hover
+        System.out.println("hoverPage.texts1.getText() = " + hoverPage.texts1.getText());
+        System.out.println("hoverPage.texts2.getText() = " + hoverPage.texts2.getText());
+        System.out.println("hoverPage.texts3.getText() = " + hoverPage.texts3.getText());
+        //right now mouse is hover on the image3 so you can see only see text3
 //Assert.assertTrue(hoverPage.texts1.getText().equals("name: user1"));
 //        Assert.assertTrue(hoverPage.texts2.getText().equals("name: user2"));
-       Assert.assertTrue(hoverPage.texts3.getText().equals("name: user3"));
+//       Assert.assertTrue(hoverPage.texts3.getText().equals("name: user3"));
     }
 
 }

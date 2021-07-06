@@ -31,6 +31,9 @@ alert.accept();
 
        Assert.assertTrue(javaScriptAlertPage.ResultText.isDisplayed());
 
+        Assert.assertEquals(javaScriptAlertPage .ResultText.getText(),"You successfuly clicked an alert");
+
+
 
     }
     @When("user clicks on JS confirm Button and clicks ok on alert")
@@ -43,6 +46,7 @@ javaScriptAlertPage.JsConfirm.click();
         Alert alert =Driver.getDriver().switchTo().alert();
         alert.accept();
         Assert.assertTrue(javaScriptAlertPage.ResultText.isDisplayed());
+        Assert.assertEquals(javaScriptAlertPage.ResultText.getText(),"You clicked: Ok");
     }
     @When("user clicks on JS Prompt Button and types a message on Prompt")
     public void user_clicks_on_js_prompt_button_and_types_a_message_on_prompt() {
@@ -56,6 +60,10 @@ javaScriptAlertPage.JsPrompt.click();
     public void the_alert_message_contains_the_typed_message() {
 
 Assert.assertEquals(javaScriptAlertPage.ResultText.getText(),"You entered: Thank you!");
+
+        Assert.assertEquals(javaScriptAlertPage.ResultText.getText(),"You entered: Thank you!");
+
+
     }
 
 }

@@ -1,4 +1,4 @@
-@test
+@test@notification
 Feature: Notification Message
 
   Scenario: Test clicks on the Click Here link a multiple times.

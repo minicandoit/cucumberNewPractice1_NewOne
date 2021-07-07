@@ -28,10 +28,38 @@ NotificationMessagePage notificationMessagePage=new NotificationMessagePage();
             notificationMessagePage.clickHereButton.click();
             System.out.println("notificationMessagePage.messages.getText() = " + notificationMessagePage.messages.getText());
             messages.add(notificationMessagePage.messages.getText());
-        }
+            if(messages.get(i).contains("Action unsuccesful, please ")){
+            Assert.assertTrue(messages.get(i).contains("Action unsuccesful, please"));
+                System.out.println("pass");
+
+            }else if(messages.get(i).contains("Action successfu")){
+              Assert.assertTrue(messages.get(i).contains("Action successfu"));
+                System.out.println("Action successful==>pass2");}else{
+               Assert.assertTrue(messages.get(i).contains("Action Unsuccessfu"));
+                System.out.println("\"pass3\" = " + "pass3");
+            }
+//
+//            System.out.println("==========================================");
+//            System.out.println("messages.get(i) = " + messages.get(i));
+//            if(messages.get(i).equals("Action unsuccesful, please try again")){
+//                Assert.assertTrue(messages.contains("Action unsuccesful, please try again"));
+//                System.out.println("Action unsuccesful, please try again==>pass");
+//            }else if(messages.get(i).equals("Action successful")){
+//                Assert.assertTrue(messages.contains("Action successful"));
+//                System.out.println("Action successful==>pass");
+//            }else{
+//             //   Assert.assertTrue(messages.contains("Action Unsuccessful"));
+//                System.out.println("\"Action Unsuccessful\" = " + "Action Unsuccessful");
+//            }
+
+       }
         System.out.println("messages = " + messages);
 
-        Assert.assertTrue(messages.contains(notificationMessagePage.messages.getText()));
+      //  Assert.assertTrue(messages.contains("Action successful"));
+
+
+
+
     }
     @Then("asserts that one of the “Action Successful”, “Action unsuccessful, please try again”and “Action Unsuccessful” messages show on click")
     public void asserts_that_one_of_the_action_successful_action_unsuccessful_please_try_again_and_action_unsuccessful_messages_show_on_click() {

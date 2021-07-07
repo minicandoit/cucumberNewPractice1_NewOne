@@ -1,4 +1,4 @@
-@test2
+@test
   Feature: Context Menu
 
 

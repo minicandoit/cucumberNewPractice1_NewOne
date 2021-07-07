@@ -33,6 +33,7 @@
                     <threadCount>4</threadCount>
                     <perCoreThreadCount>false</perCoreThreadCount>
                     <testFailureIgnore>true</testFailureIgnore>
+
                     <includes>
                         <include>**/CukesRunner*.java</include>
                     </includes>
@@ -56,6 +57,7 @@
                             <jsonFiles>
                                 <param>**/cucumber*.json</param>
                             </jsonFiles>
+                            <checkBuildResult>false</checkBuildResult>
                         </configuration>
                     </execution>
                 </executions>
@@ -69,11 +71,11 @@
     <dependencies>
 
 
-        <dependency>
-            <groupId>com.github.automatedowl</groupId>
-            <artifactId>chromedriver-js-errors-collector-junit</artifactId>
-            <version>1.0.4</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.github.automatedowl</groupId>-->
+<!--            <artifactId>chromedriver-js-errors-collector-junit</artifactId>-->
+<!--            <version>1.0.4</version>-->
+<!--        </dependency>-->
 
 
         <dependency>

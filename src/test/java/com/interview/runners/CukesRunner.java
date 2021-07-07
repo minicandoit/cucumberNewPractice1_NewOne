@@ -14,8 +14,10 @@ import org.junit.runner.RunWith;
 
       features = "src/test/resources/features" ,
         glue = "com/interview/step_definitions",
-        dryRun = false,
-        tags="@notification"
+        dryRun = false
+      //  tags="@test"
+        //for paralell testing uncomment the tags and test or verify
+
 )
 
 public class CukesRunner {

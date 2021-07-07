@@ -31,13 +31,20 @@ NewTapPage newTapPage=new NewTapPage();
         Set<String> windowHandles = Driver.getDriver().getWindowHandles();
         for (String each : windowHandles) {
             Driver.getDriver().switchTo().window(each);
+            System.out.println("each windowHandle= " + each);
             System.out.println("Current Title while switching: " + Driver.getDriver().getTitle());
+          if(Driver.getDriver().getTitle().equals("New Window")){
+              Assert.assertEquals(newTapPage.newWindowText.getText(),Driver.getDriver().getTitle());
+            }
         }
 
         String finalExpected = "New Window";
         String finalActualTitle = Driver.getDriver().getTitle();
-
         Assert.assertEquals(finalActualTitle, finalExpected);
+
+
+        System.out.println("newTapPage.newWindowText.getText() = " + newTapPage.newWindowText.getText());
+        Assert.assertEquals(newTapPage.newWindowText.getText(),"New Window");
 
 
     }

@@ -1,4 +1,4 @@
-@test
+@test@newTap
 Feature: Open in New Tab
 
   Scenario: Test clicks on the Click Here link.

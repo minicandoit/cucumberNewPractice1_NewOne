@@ -14,9 +14,10 @@ import org.junit.runner.RunWith;
 
       features = "src/test/resources/features" ,
         glue = "com/interview/step_definitions",
-        dryRun = false
-      //  tags="@test"
+        dryRun = false,
+       tags="@test"
         //for paralell testing uncomment the tags and test or verify
+        //for reporting
 
 )
 
